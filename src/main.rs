@@ -20,10 +20,10 @@ struct Inhabitant {
 }
 
 // * Display the header
-fn display_header() {
+fn display_header(title: &str) {
     let font = FIGfont::standard().unwrap();
 
-    let figure = font.convert("Now In Space");
+    let figure = font.convert(title);
 
     println!("{}", figure.unwrap().to_string().blue());
     println!("---------------------------------");
@@ -39,7 +39,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // * Deserialize the JSON data
     let people: Inhabitant = res.json().await?;
 
-    display_header();
+    display_header("Now In Space");
 
     println!("People in space : {} \n", people.number.to_string().green());
 
