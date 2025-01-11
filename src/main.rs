@@ -19,7 +19,6 @@ struct Inhabitant {
     number: i32,
 }
 
-// * Display the header
 fn display_header(title: &str) {
     // * Create the FIGfont
     let font = FIGfont::standard().unwrap();
