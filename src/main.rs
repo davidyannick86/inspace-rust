@@ -3,7 +3,7 @@ use figlet_rs::FIGfont;
 use serde::Deserialize;
 
 // * URL to fetch the data
-static URL: &'static str = "http://api.open-notify.org/astros.json";
+static URL: &str = "http://api.open-notify.org/astros.json";
 
 // * Struct to deserialize the JSON data
 #[derive(Debug, Deserialize)]
